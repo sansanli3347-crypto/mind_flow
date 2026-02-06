@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFlow AI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#607AFB",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1323",
+                        "sage-soft": "#e8f0e9",
+                        cream: "#fdfcf0"
+                    },
+                    fontFamily: {
+                        display: ["Lexend", "sans-serif"],
+                        sans: ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body { font-family: 'Lexend', sans-serif; }
+        .bg-mesh {
+            background-color: #f6f8f6;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(96, 122, 251, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(96, 122, 251, 0.08) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(253, 252, 240, 1) 0px, transparent 50%);
+        }
+        .dark .bg-mesh {
+            background-color: #0f1323;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(96, 122, 251, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(0, 0, 0, 0.2) 0px, transparent 50%);
+        }
+        .friction-low { background-color: rgba(19, 236, 91, 0.1); color: #0a7a2f; }
+        .friction-med { background-color: rgba(255, 193, 7, 0.1); color: #856404; }
+        .friction-high { background-color: rgba(220, 38, 38, 0.1); color: #991b1b; }
+        .soft-glow-focus:focus-within {
+            box-shadow: 0 0 25px rgba(96, 122, 251, 0.15);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
